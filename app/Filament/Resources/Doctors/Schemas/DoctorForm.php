@@ -2,7 +2,9 @@
 
 namespace App\Filament\Resources\Doctors\Schemas;
 
+use App\Models\Service;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Toggle;
 use Filament\Forms\Components\Repeater;
 use Filament\Forms\Components\TextInput;
@@ -14,6 +16,10 @@ class DoctorForm
     {
         return $schema
             ->components([
+                Select::make('id_service')
+                    ->label('Service')
+                    ->options(Service::all()->pluck('name', 'id'))
+                    ->columnSpanFull(),
                 TextInput::make('name')
                     ->required(),
                 TextInput::make('spesialist')
@@ -21,7 +27,6 @@ class DoctorForm
                 FileUpload::make('image')
                     ->image()
                     ->directory('doctor')
-                    ->required()
                     ->columnSpanFull(),
                 Repeater::make('schedule')
                     ->label('Schedule')
