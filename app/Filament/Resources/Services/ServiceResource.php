@@ -15,12 +15,19 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class ServiceResource extends Resource
 {
     protected static ?string $model = Service::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Server;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
+
+    protected static ?string $navigationLabel = 'Service';
+
+    protected static ?string $pluralModelLabel = 'Service';
 
     public static function form(Schema $schema): Schema
     {

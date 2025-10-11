@@ -2,15 +2,17 @@
 
 namespace App\Filament\Resources\Services\Tables;
 
+use Filament\Tables\Table;
+use Filament\Actions\EditAction;
 use Filament\Actions\BulkActionGroup;
 use Filament\Actions\DeleteBulkAction;
-use Filament\Actions\EditAction;
-use Filament\Actions\ForceDeleteBulkAction;
 use Filament\Actions\RestoreBulkAction;
 use Filament\Tables\Columns\IconColumn;
 use Filament\Tables\Columns\TextColumn;
+use Filament\Tables\Columns\ImageColumn;
+use Filament\Tables\Columns\ToggleColumn;
 use Filament\Tables\Filters\TrashedFilter;
-use Filament\Tables\Table;
+use Filament\Actions\ForceDeleteBulkAction;
 
 class ServicesTable
 {
@@ -18,23 +20,35 @@ class ServicesTable
     {
         return $table
             ->columns([
+                ImageColumn::make('banner')
+                    ->label('Banner')
+                    ->square()
+                    ->imageHeight(50),
+
+                ImageColumn::make('icon')
+                    ->label('Icon')
+                    ->square()
+                    ->imageHeight(40),
+
                 TextColumn::make('name')
-                    ->searchable(),
-                TextColumn::make('icon')
-                    ->searchable(),
-                TextColumn::make('banner')
-                    ->searchable(),
+                    ->searchable()
+                    ->sortable(),
+
+                TextColumn::make('description')
+                    ->limit(50)
+                    ->toggleable(),
+
+                TextColumn::make('schedule')
+                    ->label('Schedule'),
+
                 IconColumn::make('active')
                     ->boolean(),
-                TextColumn::make('created_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('updated_by')
-                    ->numeric()
-                    ->sortable(),
-                TextColumn::make('deleted_by')
-                    ->numeric()
-                    ->sortable(),
+                TextColumn::make('createdBy.name')
+                    ->label('Created By'),
+                TextColumn::make('updatedBy.name')
+                    ->label("Updated by"),
+                TextColumn::make('deletedBy.name')
+                    ->label("Deleted by"),
                 TextColumn::make('created_at')
                     ->dateTime()
                     ->sortable()
