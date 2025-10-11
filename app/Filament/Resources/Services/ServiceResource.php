@@ -23,7 +23,7 @@ class ServiceResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::Server;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
+    protected static string | UnitEnum | null $navigationGroup = 'Data Layanan';
 
     protected static ?string $navigationLabel = 'Service';
 
