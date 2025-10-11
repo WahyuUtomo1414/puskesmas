@@ -2,11 +2,13 @@
 
 namespace App\Filament\Resources\Services\Schemas;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
-use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 
 class ServiceForm
 {
@@ -15,28 +17,46 @@ class ServiceForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->required(),
-                Textarea::make('description')
                     ->columnSpanFull(),
-                TextInput::make('schedule')
-                    ->required(),
+                RichEditor::make('description')
+                    ->columnSpanFull(),
+                FileUpload::make('banner')
+                    ->required()
+                    ->directory('service')
+                    ->image()
+                    ->columnSpanFull(),
+                FileUpload::make('icon')
+                    ->required()
+                    ->directory('service')
+                    ->image()
+                    ->columnSpanFull(),    
+                Repeater::make('schedule')
+                    ->label('Schedule')
+                    ->schema([
+                        TextInput::make('day')
+                            ->label('Day')
+                            ->placeholder('e.g. Monday')
+                            ->required(),
+
+                        TextInput::make('time')
+                            ->label('Time')
+                            ->placeholder('e.g. 08:00 - 17:00')
+                            ->required(),
+                    ])
+                    ->columns(2)
+                    ->required()
+                    ->columnSpanFull()
+                    ->addActionLabel('Add Schedule')
+                    ->defaultItems(1),
                 FileUpload::make('image')
                     ->image()
-                    ->required(),
-                TextInput::make('icon')
-                    ->required(),
-                TextInput::make('banner')
-                    ->required(),
+                    ->directory('service')
+                    ->image()
+                    ->multiple()
+                    ->required()
+                    ->columnSpanFull(),      
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
