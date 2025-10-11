@@ -23,6 +23,8 @@ class DoctorsTable
                     ->searchable(),
                 TextColumn::make('spesialist')
                     ->searchable(),
+                TextColumn::make('service.name')
+                    ->searchable(),
                 ImageColumn::make('image'),
                 IconColumn::make('active')
                     ->boolean(),
