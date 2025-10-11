@@ -2,6 +2,8 @@
 
 namespace App\Filament\Resources\Profiles\Schemas;
 
+use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
@@ -13,27 +15,25 @@ class ProfileForm
     {
         return $schema
             ->components([
-                Textarea::make('story')
+                RichEditor::make('story')
                     ->required()
                     ->columnSpanFull(),
-                TextInput::make('vision')
-                    ->required(),
-                TextInput::make('mision')
-                    ->required(),
-                TextInput::make('motto')
-                    ->required(),
-                TextInput::make('struktur_organisasi')
-                    ->required(),
+                Textarea::make('vision')
+                    ->required()
+                    ->columnSpanFull(),
+                Textarea::make('mision')
+                    ->required()
+                    ->columnSpanFull(),
+                Textarea::make('motto')
+                    ->required()
+                    ->columnSpanFull(),
+                FileUpload::make('struktur_organisasi')
+                    ->required()
+                    ->image()
+                    ->directory('profile')
+                    ->columnSpanFull(),
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
