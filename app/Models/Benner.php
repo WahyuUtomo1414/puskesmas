@@ -9,7 +9,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Banner extends Model
+class Benner extends Model
 {
     use HasFactory, Notifiable, AuditedBySoftDelete, SoftDeletes;
     protected $table = 'benner';
