@@ -14,6 +14,10 @@ class Blog extends Model
     protected $table = 'blog';
     protected $guarded = ['id'];
 
+    protected $casts = [
+        'image' => 'array',
+    ];
+
     public function category()
     {
         return $this->belongsTo(Category::class, 'id_category');
