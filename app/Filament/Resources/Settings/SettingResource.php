@@ -15,12 +15,21 @@ use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use UnitEnum;
 
 class SettingResource extends Resource
 {
     protected static ?string $model = Setting::class;
 
-    protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+    protected static string|BackedEnum|null $navigationIcon = Heroicon::Key;
+
+    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
+
+    protected static ?string $navigationLabel = 'Setting';
+
+    protected static ?string $pluralModelLabel = 'Setting';
+
+    protected static ?string $recordTitleAttribute = 'Setting';
 
     public static function form(Schema $schema): Schema
     {
