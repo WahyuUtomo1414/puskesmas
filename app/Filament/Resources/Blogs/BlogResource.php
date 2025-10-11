@@ -23,7 +23,7 @@ class BlogResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::PencilSquare;
 
-    protected static string | UnitEnum | null $navigationGroup = 'Data Website';
+    protected static string | UnitEnum | null $navigationGroup = 'Data Blog';
 
     protected static ?string $navigationLabel = 'Blog';
 
