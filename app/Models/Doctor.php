@@ -17,4 +17,9 @@ class Doctor extends Model
     protected $casts = [
         'schedule' => 'array',
     ];
+
+    public function service()
+    {
+        return $this->belongsTo(Service::class, 'id_service');
+    }
 }
