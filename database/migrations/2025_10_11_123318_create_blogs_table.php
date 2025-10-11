@@ -20,7 +20,7 @@ return new class extends Migration
             $table->string('banner', 128);
             $table->text('content');
             $table->json('image');
-            $table->timestamps();
+            $this->base($table);
         });
     }
 
