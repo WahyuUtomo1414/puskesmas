@@ -13,4 +13,8 @@ class Doctor extends Model
     use HasFactory, Notifiable, AuditedBySoftDelete, SoftDeletes;
     protected $table = 'doctor';
     protected $guarded = ['id'];
+
+    protected $casts = [
+        'schedule' => 'array',
+    ];
 }

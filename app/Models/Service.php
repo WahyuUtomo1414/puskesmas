@@ -13,4 +13,9 @@ class Service extends Model
     use HasFactory, Notifiable, AuditedBySoftDelete, SoftDeletes;
     protected $table = 'service';
     protected $guarded = ['id'];
+
+    protected $casts = [
+        'schedule' => 'array',
+        'image' => 'array',
+    ];
 }
