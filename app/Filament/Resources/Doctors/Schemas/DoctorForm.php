@@ -2,10 +2,11 @@
 
 namespace App\Filament\Resources\Doctors\Schemas;
 
-use Filament\Forms\Components\FileUpload;
-use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
+use Filament\Forms\Components\Toggle;
+use Filament\Forms\Components\Repeater;
+use Filament\Forms\Components\TextInput;
+use Filament\Forms\Components\FileUpload;
 
 class DoctorForm
 {
@@ -19,19 +20,29 @@ class DoctorForm
                     ->required(),
                 FileUpload::make('image')
                     ->image()
-                    ->required(),
-                TextInput::make('schedule')
-                    ->required(),
+                    ->directory('doctor')
+                    ->required()
+                    ->columnSpanFull(),
+                Repeater::make('schedule')
+                    ->label('Schedule')
+                    ->schema([
+                        TextInput::make('day')
+                            ->label('Day')
+                            ->placeholder('e.g. Monday')
+                            ->required(),
+
+                        TextInput::make('time')
+                            ->label('Time')
+                            ->placeholder('e.g. 08:00 - 17:00')
+                            ->required(),
+                    ])
+                    ->columns(2)
+                    ->required()
+                    ->columnSpanFull()
+                    ->addActionLabel('Add Schedule')
+                    ->defaultItems(1),
                 Toggle::make('active')
                     ->required(),
-                TextInput::make('created_by')
-                    ->required()
-                    ->numeric()
-                    ->default(1),
-                TextInput::make('updated_by')
-                    ->numeric(),
-                TextInput::make('deleted_by')
-                    ->numeric(),
             ]);
     }
 }
