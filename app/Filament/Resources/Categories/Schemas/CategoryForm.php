@@ -21,7 +21,8 @@ class CategoryForm
                     ->columnSpanFull()
                     ->label('Deskripsi'),
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

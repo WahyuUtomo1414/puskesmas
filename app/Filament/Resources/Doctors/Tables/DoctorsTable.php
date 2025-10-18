@@ -27,7 +27,8 @@ class DoctorsTable
                     ->searchable(),
                 ImageColumn::make('image'),
                 IconColumn::make('active')
-                    ->boolean(),
+                    ->boolean()
+                    ->label('Aktif'),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')

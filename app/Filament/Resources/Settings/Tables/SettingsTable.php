@@ -26,7 +26,8 @@ class SettingsTable
                     ->html()
                     ->limit(100),
                 IconColumn::make('active')
-                    ->boolean(),
+                    ->boolean()
+                    ->label('Aktif'),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')

@@ -47,7 +47,8 @@ class DoctorForm
                     ->addActionLabel('Add Schedule')
                     ->defaultItems(1),
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

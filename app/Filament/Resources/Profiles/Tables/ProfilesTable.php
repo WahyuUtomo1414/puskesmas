@@ -27,7 +27,8 @@ class ProfilesTable
                     ->searchable(),
                 ImageColumn::make('struktur_organisasi'),
                 IconColumn::make('active')
-                    ->boolean(),
+                    ->boolean()
+                    ->label('Aktif'),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')

@@ -56,7 +56,8 @@ class ServiceForm
                     ->required()
                     ->columnSpanFull(),      
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

@@ -43,7 +43,8 @@ class SettingForm
                     ->hidden(fn ($get) => $get('type') !== 'Textarea'),
 
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

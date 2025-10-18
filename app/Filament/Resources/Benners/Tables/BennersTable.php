@@ -28,7 +28,8 @@ class BennersTable
                 ImageColumn::make('image')
                     ->disk('public'),
                 IconColumn::make('active')
-                    ->boolean(),
+                    ->boolean()
+                    ->label('Aktif'),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')

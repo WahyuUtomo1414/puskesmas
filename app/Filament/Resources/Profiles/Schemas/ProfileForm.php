@@ -33,7 +33,8 @@ class ProfileForm
                     ->directory('profile')
                     ->columnSpanFull(),
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

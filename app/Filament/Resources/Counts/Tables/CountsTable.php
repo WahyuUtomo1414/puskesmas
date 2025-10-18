@@ -21,12 +21,14 @@ class CountsTable
                 TextColumn::make('type')
                     ->searchable(),
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Nama'),
                 TextColumn::make('value')
                     ->numeric()
                     ->sortable(),
                 IconColumn::make('active')
-                    ->boolean(),
+                    ->boolean()
+                    ->label('Aktif'),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')

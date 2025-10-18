@@ -15,7 +15,8 @@ class CountForm
                 TextInput::make('type')
                     ->required(),
                 TextInput::make('name')
-                    ->required(),
+                    ->required()
+                    ->label('Nama'),
                 TextInput::make('value')
                     ->required()
                     ->numeric(),

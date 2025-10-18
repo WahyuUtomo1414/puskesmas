@@ -30,7 +30,8 @@ class BennerForm
                     ->columnSpanFull()
                     ->required(),
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

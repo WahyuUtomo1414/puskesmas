@@ -41,7 +41,8 @@ class BlogForm
                     ->required()
                     ->columnSpanFull(),
                 Toggle::make('active')
-                    ->required(),
+                    ->required()
+                    ->label('Aktif'),
             ]);
     }
 }

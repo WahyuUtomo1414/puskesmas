@@ -25,7 +25,8 @@ class CategoriesTable
                     ->searchable()
                     ->label('Deskripsi'),
                 IconColumn::make('active')
-                    ->boolean(),
+                    ->boolean()
+                    ->label('Aktif'),
                 TextColumn::make('createdBy.name')
                     ->label('Created By'),
                 TextColumn::make('updatedBy.name')
