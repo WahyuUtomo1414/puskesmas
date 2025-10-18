@@ -17,21 +17,26 @@ class ProfileForm
             ->components([
                 RichEditor::make('story')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Sejarah'),
                 Textarea::make('vision')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Visi'),
                 Textarea::make('mision')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Misi'),
                 Textarea::make('motto')
                     ->required()
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Moto'),
                 FileUpload::make('struktur_organisasi')
                     ->required()
                     ->image()
                     ->directory('profile')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Struktur Organisasi'),
                 Toggle::make('active')
                     ->required()
                     ->label('Aktif'),

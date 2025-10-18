@@ -20,12 +20,16 @@ class ProfilesTable
         return $table
             ->columns([
                 TextColumn::make('vision')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Visi'),
                 TextColumn::make('mision')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Misi'),
                 TextColumn::make('motto')
-                    ->searchable(),
-                ImageColumn::make('struktur_organisasi'),
+                    ->searchable()
+                    ->label('Motto'),
+                ImageColumn::make('struktur_organisasi')
+                    ->label('Struktur Organisasi'),
                 IconColumn::make('active')
                     ->boolean()
                     ->label('Aktif'),
