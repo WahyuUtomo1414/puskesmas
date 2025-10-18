@@ -20,10 +20,13 @@ class BennersTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Nama'),
                 TextColumn::make('position')
-                    ->searchable(),
-                ImageColumn::make('image'),
+                    ->searchable()
+                    ->label('Posisi'),
+                ImageColumn::make('image')
+                    ->disk('public'),
                 IconColumn::make('active')
                     ->boolean(),
                 TextColumn::make('createdBy.name')
