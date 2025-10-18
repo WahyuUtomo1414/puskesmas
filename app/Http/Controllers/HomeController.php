@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Count;
 use Illuminate\Http\Request;
 use App\Helpers\BennerHelper;
 use App\Helpers\SettingHelper;
+use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
 {
@@ -12,17 +14,17 @@ class HomeController extends Controller
     {
         $data = [];
 
-        // $homeData = Cache::remember('home_data', 600, function () {
-        //     return [
-        //         'counts' => Count::where('active', true)->limit(4)->get(),
-        //         'divisi' => Division::where('active', true)->limit(4)->get(),
-        //         'faqs'   => Faq::where('active', true)->limit(6)->get(),
-        //         'branches' => Branch::where('active', true)->with('blogs')->get(),
-        //         'blogs'    => Blog::where('active', true)->get(),
-        //         'branchesAsc' => Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'asc')])->get(),
-        //         'branchesDesc'=> Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'desc')])->get(),
-        //     ];
-        // });
+        $homeData = Cache::remember('home_data', 600, function () {
+            return [
+                'counts' => Count::where('active', true)->limit(4)->get(),
+                // 'divisi' => Division::where('active', true)->limit(4)->get(),
+                // 'faqs'   => Faq::where('active', true)->limit(6)->get(),
+                // 'branches' => Branch::where('active', true)->with('blogs')->get(),
+                // 'blogs'    => Blog::where('active', true)->get(),
+                // 'branchesAsc' => Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'asc')])->get(),
+                // 'branchesDesc'=> Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'desc')])->get(),
+            ];
+        });
 
         // // Get Setting Helpers Hero Section
         // $data['heroTitle'] = SettingHelper::getSetting('title_hero');
@@ -57,6 +59,6 @@ class HomeController extends Controller
         // $data['linkedin'] = SettingHelper::getSetting('linkedin');
         // $data['whatsapp'] = SettingHelper::getSetting('whatsapp');
 
-        return view('pages.homepage', $data = array_merge($data));
+        return view('pages.homepage', $data = array_merge($data, $homeData));
     }
 }
