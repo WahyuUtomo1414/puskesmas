@@ -4,7 +4,7 @@
             
             <div class="navbar-brand w-full flex items-center space-x-3">
                 <a href="/" class="block">
-                    <img src="{{ asset('images/logo1.jpg') }}" alt="HIMSI Logo" class="h-10 w-auto max-h-16" style="max-width:150px;">
+                    <img src="{{ asset('images/logo1.jpg') }}" alt="HIMSI Logo" class="h-16 w-auto max-h-16" style="max-width:150px;">
                 </a>
             </div>
 

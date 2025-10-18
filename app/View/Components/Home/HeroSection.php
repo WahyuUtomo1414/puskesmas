@@ -12,15 +12,15 @@ class HeroSection extends Component
      * Create a new component instance.
      */
     public function __construct(
-        public string $heroTitle,
-        public string $heroAnimate,
-        public string $heroText,
-        public string $gabungSekarang,
-        public string $bukuPedoman,
-        public string $large,
-        public string $kanan,
-        public string $kiri,
-        public string $kecil
+        // public string $heroTitle,
+        // public string $heroAnimate,
+        // public string $heroText,
+        // public string $gabungSekarang,
+        // public string $bukuPedoman,
+        // public string $large,
+        // public string $kanan,
+        // public string $kiri,
+        // public string $kecil
     ) {
         //
     }
