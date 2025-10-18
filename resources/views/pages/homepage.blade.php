@@ -7,19 +7,17 @@
 
         <x-home.sambutan-section />
 
-        {{-- <x-home.about-section :aboutTextA="$aboutTextA" :aboutTextB="$aboutTextB" :vision="$vision" :mission="$mission" :aboutImage="$aboutImage" /> --}}
+        {{-- <x-home.about-section :aboutTextA="$aboutTextA" :aboutTextB="$aboutTextB" :vision="$vision" :mission="$mission" :aboutImage="$aboutImage" /> 
 
-        {{-- <x-home.count-section :counts="$counts" /> --}}
+        <x-home.count-section :counts="$counts" />
 
-        {{-- <x-home.division-section :divisi="$divisi" /> --}}
+        <x-home.division-section :divisi="$divisi" />
 
-        {{--  <x-home.branch-section :branches="$branches" />
+        <x-home.branch-section :branches="$branches" />
 
-        <x-home.galery-section :branchesDesc="$branchesDesc" :branchesAsc="$branchesAsc" :galeryTitle="$galeryTitle" :galeryText="$galeryText" />
+        <x-home.galery-section :branchesDesc="$branchesDesc" :branchesAsc="$branchesAsc" :galeryTitle="$galeryTitle" :galeryText="$galeryText" /> --}}
 
         <x-home.blog-section :blogs="$blogs" />
-
-        <x-home.faq-section :faqs="$faqs" :faqTitle="$faqTitle" /> --}}
 
         <x-layout.footer />
     </div>

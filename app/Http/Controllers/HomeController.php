@@ -2,11 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Blog;
 use App\Models\Count;
+use App\Models\Service;
 use Illuminate\Http\Request;
 use App\Helpers\BennerHelper;
 use App\Helpers\SettingHelper;
-use App\Models\Service;
 use Illuminate\Support\Facades\Cache;
 
 class HomeController extends Controller
@@ -21,7 +22,7 @@ class HomeController extends Controller
                 'divisi' => Service::where('active', true)->limit(4)->get(),
                 // 'faqs'   => Faq::where('active', true)->limit(6)->get(),
                 // 'branches' => Branch::where('active', true)->with('blogs')->get(),
-                // 'blogs'    => Blog::where('active', true)->get(),
+                'blogs'    => Blog::where('active', true)->get(),
                 // 'branchesAsc' => Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'asc')])->get(),
                 // 'branchesDesc'=> Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'desc')])->get(),
             ];
