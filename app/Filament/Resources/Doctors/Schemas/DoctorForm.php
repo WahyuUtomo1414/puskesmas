@@ -17,13 +17,15 @@ class DoctorForm
         return $schema
             ->components([
                 Select::make('id_service')
-                    ->label('Service')
+                    ->label('Layanan')
                     ->options(Service::all()->pluck('name', 'id'))
                     ->columnSpanFull(),
                 TextInput::make('name')
-                    ->required(),
+                    ->required()
+                    ->label('Nama'),
                 TextInput::make('spesialist')
-                    ->required(),
+                    ->required()
+                    ->label('Spesialis'),
                 FileUpload::make('image')
                     ->image()
                     ->directory('doctor')
@@ -44,7 +46,7 @@ class DoctorForm
                     ->columns(2)
                     ->required()
                     ->columnSpanFull()
-                    ->addActionLabel('Add Schedule')
+                    ->addActionLabel('Tambah Schedule')
                     ->defaultItems(1),
                 Toggle::make('active')
                     ->required()

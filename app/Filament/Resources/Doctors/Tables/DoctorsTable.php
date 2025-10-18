@@ -20,11 +20,14 @@ class DoctorsTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Nama'),
                 TextColumn::make('spesialist')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Spesialis'),
                 TextColumn::make('service.name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Layanan'),
                 ImageColumn::make('image'),
                 IconColumn::make('active')
                     ->boolean()
