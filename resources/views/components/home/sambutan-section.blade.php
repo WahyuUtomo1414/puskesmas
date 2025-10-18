@@ -12,11 +12,11 @@
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <blockquote class="icon relative p-0 border-0 text-[28px] !leading-[1.7] font-medium m-[0_0_1rem] before:content-['\201d'] before:absolute before:top-[-1.5rem] before:left-[-0.9rem] before:text-[rgba(52,63,82,0.05)] before:text-[10rem] before:leading-none before:z-[1]">
-                        <p>“Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Vestibulum ligula porta felis euismod semper. Cras justo odio consectetur nulla dapibus curabitur blandit.”</p>
+                        <p>“Kami berkomitmen memberikan pelayanan kesehatan terbaik bagi masyarakat Purwodadi dengan semangat profesionalisme, kepedulian, dan inovasi berkelanjutan.”</p>
                         <div class="flex items-center text-left">
                             <div class="info !pl-0">
-                                <h5 class="!mb-1 text-[20px] !leading-[1.5]">Coriss Ambady</h5>
-                                <p class="!mb-0 text-[20px]">Financial Analyst</p>
+                                <h5 class="!mb-1 text-[20px] !leading-[1.5]">Priyadi Yusra Wijaya, SKM., M,Kes</h5>
+                                <p class="!mb-0 text-[20px]">Kepala Puskesmas</p>
                             </div>
                         </div>
                     </blockquote>
