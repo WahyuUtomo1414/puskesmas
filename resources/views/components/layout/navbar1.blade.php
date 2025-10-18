@@ -16,7 +16,7 @@
                 <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">Profile</a></li>
+                        <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
                         
                         <li class="nav-item"><a class="nav-link" href="#divisi">Layanan</a>
                         </li>
