@@ -11,9 +11,9 @@
 
         <x-home.count-section :counts="$counts" />
 
-        {{--  <x-home.division-section :divisi="$divisi" />
+        {{-- <x-home.division-section :divisi="$divisi" /> --}}
 
-        <x-home.branch-section :branches="$branches" />
+        {{--  <x-home.branch-section :branches="$branches" />
 
         <x-home.galery-section :branchesDesc="$branchesDesc" :branchesAsc="$branchesAsc" :galeryTitle="$galeryTitle" :galeryText="$galeryText" />
 
