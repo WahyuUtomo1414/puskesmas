@@ -18,7 +18,7 @@
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
                         
-                        <li class="nav-item"><a class="nav-link" href="#divisi">Layanan</a>
+                        <li class="nav-item"><a class="nav-link" href="/service">Layanan</a>
                         </li>
                         
                         <div class="offcanvas-footer xl:!hidden lg:!hidden">
