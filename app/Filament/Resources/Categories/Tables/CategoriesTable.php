@@ -19,7 +19,11 @@ class CategoriesTable
         return $table
             ->columns([
                 TextColumn::make('name')
-                    ->searchable(),
+                    ->searchable()
+                    ->label('Nama'),
+                TextColumn::make('description')
+                    ->searchable()
+                    ->label('Deskripsi'),
                 IconColumn::make('active')
                     ->boolean(),
                 TextColumn::make('createdBy.name')

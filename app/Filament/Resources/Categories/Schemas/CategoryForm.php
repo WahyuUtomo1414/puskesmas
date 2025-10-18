@@ -15,9 +15,11 @@ class CategoryForm
             ->components([
                 TextInput::make('name')
                     ->required()
+                    ->label('Nama')
                     ->columnSpanFull(),
                 Textarea::make('description')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Deskripsi'),
                 Toggle::make('active')
                     ->required(),
             ]);
