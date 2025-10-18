@@ -5,6 +5,8 @@
 
         <x-home.hero-section />
 
+        <x-home.sambutan-section />
+
         {{-- <x-home.about-section :aboutTextA="$aboutTextA" :aboutTextB="$aboutTextB" :vision="$vision" :mission="$mission" :aboutImage="$aboutImage" />
 
         <x-home.count-section :counts="$counts" />
