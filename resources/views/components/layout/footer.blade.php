@@ -19,8 +19,7 @@
                         <ul class="pl-0 list-none text-inherit  !mb-0">
                             <li><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $instagram }}" target="_blank">Instagram</a></li>
                             <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $tiktok }}" target="_blank">Tiktok</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $linkedin }}" target="_blank">Linkedin</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $youtube }}" target="_blank">Youtube</a></li>
+                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="{{ $facebook }}" target="_blank">Facebook</a></li>
                         </ul>
                     </div>
                 <!-- /.widget -->

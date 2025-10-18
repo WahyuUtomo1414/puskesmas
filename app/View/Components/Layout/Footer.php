@@ -10,16 +10,14 @@ use Illuminate\Contracts\View\View;
 class Footer extends Component
 {
     public string $instagram;
-    public string $youtube;
     public string $tiktok;
-    public string $linkedin;
+    public string $facebook;
 
     public function __construct()
     {
         $this->instagram = SettingHelper::getSetting('instagram') ?? '';
-        $this->youtube   = SettingHelper::getSetting('youtube') ?? '';
         $this->tiktok    = SettingHelper::getSetting('tiktok') ?? '';
-        $this->linkedin  = SettingHelper::getSetting('linkedin') ?? '';
+        $this->facebook  = SettingHelper::getSetting('Facebook') ?? '';
     }
 
     /**

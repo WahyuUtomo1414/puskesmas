@@ -45,11 +45,10 @@ class HomeController extends Controller
         // $data['faqTitle'] = SettingHelper::getSetting('faq_title');
 
         // //Get Setting Helpers Footer Section
-        // $data['instagram'] = SettingHelper::getSetting('instagram');
-        // $data['youtube'] = SettingHelper::getSetting('youtube');
-        // $data['tiktok'] = SettingHelper::getSetting('tiktok');
-        // $data['linkedin'] = SettingHelper::getSetting('linkedin');
-        // $data['whatsapp'] = SettingHelper::getSetting('whatsapp');
+        $data['instagram'] = SettingHelper::getSetting('instagram');
+        $data['tiktok'] = SettingHelper::getSetting('tiktok');
+        $data['facobook'] = SettingHelper::getSetting('Facobook');
+        //$data['whatsapp'] = SettingHelper::getSetting('whatsapp');
 
         return view('pages.homepage', $data = array_merge($data, $homeData));
     }
