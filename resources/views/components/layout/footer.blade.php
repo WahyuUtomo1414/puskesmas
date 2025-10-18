@@ -6,8 +6,8 @@
                 
                 <div class="xl:w-4/12 lg:w-4/12 w-full flex-[0_0_auto] !px-[15px] max-w-full xl:!mt-0 lg:!mt-0 !mt-[30px]">
                     <div class="widget">
-                        <h3 class="h2 !mb-3 !text-white !leading-[1.35]">Bergabung Dengan Kami</h3>
-                        <p class="lead !leading-[1.65] text-[0.9rem] font-medium !mb-5">Ayo berikan hidupmu pengalaman yang menarik, bermanfaat, dan berdampak kepada masyarakat.</p>
+                        <h3 class="h2 !mb-3 !text-white !leading-[1.35]">UPDT Puskesmas Purwodadi</h3>
+                        <p class="lead !leading-[1.65] text-[0.9rem] font-medium !mb-5">Kami percaya bahwa kesehatan adalah investasi terbaik.</p>
                     </div>
                 <!-- /.widget -->
                 </div>
@@ -30,9 +30,8 @@
                     <div class="widget">
                         <h4 class="widget-title !text-white !mb-3">Halaman</h4>
                         <ul class="pl-0 list-none   !mb-0">
-                            <li><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Tentang Kami</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Divisi</a></li>
-                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Galeri</a></li>
+                            <li><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Profile</a></li>
+                            <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Layanan</a></li>
                             {{-- <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Pricing</a></li>
                             <li class="!mt-[0.35rem]"><a class="!text-[#cacaca] hover:!text-[#3f78e0]" href="#">Features</a></li> --}}
                         </ul>
@@ -56,8 +55,8 @@
 
             <hr class="!mt-13 xl:!mt-20 lg:!mt-20 md:!mt-20 !mb-7">
             <div class="xl:!flex lg:!flex md:!flex items-center justify-between">
-                <p class="!mb-2 xl:!mb-0 lg:!mb-0">© 2025 HIMSI UBSI. All rights reserved.</p>
-                <p class="!mb-2 xl:!mb-0 lg:!mb-0">Divisi Pendidikan | Kabinet Trivolte</p>
+                <p class="!mb-2 xl:!mb-0 lg:!mb-0">© 2025 Puskesmas Purwodadi.</p>
+                <p class="!mb-2 xl:!mb-0 lg:!mb-0">All rights reserved.</p>
             </div>
 
             <!-- /.container -->
