@@ -32,11 +32,13 @@ class ServicesTable
 
                 TextColumn::make('name')
                     ->searchable()
-                    ->sortable(),
+                    ->sortable()
+                    ->label('Nama'),
 
                 TextColumn::make('description')
                     ->limit(50)
-                    ->toggleable(),
+                    ->toggleable()
+                    ->label('Deskripsi'),
 
                 TextColumn::make('schedule')
                     ->label('Schedule'),

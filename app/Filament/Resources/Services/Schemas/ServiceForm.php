@@ -17,9 +17,11 @@ class ServiceForm
         return $schema
             ->components([
                 TextInput::make('name')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Name'),
                 RichEditor::make('description')
-                    ->columnSpanFull(),
+                    ->columnSpanFull()
+                    ->label('Deskripsi'),
                 FileUpload::make('banner')
                     ->required()
                     ->directory('service')
@@ -46,7 +48,7 @@ class ServiceForm
                     ->columns(2)
                     ->required()
                     ->columnSpanFull()
-                    ->addActionLabel('Add Schedule')
+                    ->addActionLabel('Tambah Schedule')
                     ->defaultItems(1),
                 FileUpload::make('image')
                     ->image()
