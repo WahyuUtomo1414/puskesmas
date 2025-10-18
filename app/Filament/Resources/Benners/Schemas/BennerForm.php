@@ -23,6 +23,7 @@ class BennerForm
                     ->maxLength(128),
                 FileUpload::make('image')
                     ->image()
+                    ->disk('public')
                     ->directory('benner')
                     ->columnSpanFull()
                     ->required(),

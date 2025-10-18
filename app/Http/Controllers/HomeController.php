@@ -28,17 +28,7 @@ class HomeController extends Controller
             ];
         });
 
-        // // Get Setting Helpers Hero Section
-        // $data['heroTitle'] = SettingHelper::getSetting('title_hero');
-        // $data['heroAnimate'] = SettingHelper::getSetting('animate_hero');
-        // $data['heroText'] = SettingHelper::getSetting('text_hero');
-        // $data['gabungSekarang'] = SettingHelper::getSetting('gabung_sekarang');
-        // $data['bukuPedoman'] = SettingHelper::getSetting('buku_pedoman');
-
-        // $data['large'] = BennerHelper::getBennerImageUrl('hero_large');
-        // $data['kanan'] = BennerHelper::getBennerImageUrl('hero_1');
-        // $data['kiri'] = BennerHelper::getBennerImageUrl('hero_2');
-        // $data['kecil'] = BennerHelper::getBennerImageUrl('hero_kecil');
+        $data['hero'] = BennerHelper::getBennerImageUrl('hero');
 
         // Get Setting Helpers About Section
         $data['aboutTextA'] = SettingHelper::getSetting('about_text_a');
