@@ -15,10 +15,12 @@ class BennerForm
             ->components([
                 TextInput::make('name')
                     ->required()
+                    ->label('Nama')
                     ->columnSpanFull()
                     ->maxLength(128),
                 TextInput::make('position')
                     ->required()
+                    ->label('Posisi')
                     ->columnSpanFull()
                     ->maxLength(128),
                 FileUpload::make('image')
