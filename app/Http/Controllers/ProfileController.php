@@ -15,7 +15,7 @@ class ProfileController extends Controller
         $profileData = Cache::remember('profile_data', 600, function () {
             return [
                 'counts' => Count::where('active', true)->limit(4)->get(),
-                'profileData' => Profile::where('active', true)->limit(1)->get(),
+                'profileData' => Profile::where('active', true)->where('active', true)->first(),
             ];
         });
 

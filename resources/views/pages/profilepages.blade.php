@@ -3,6 +3,8 @@
         <x-layout.navbar />
 
         <x-profile.benner-section :counts="$counts" :profile="$profile" />
+
+        <x-profile.profile-section :profileData="$profileData" />
         
         <x-layout.footer />
     </div>

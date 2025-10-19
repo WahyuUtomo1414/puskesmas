@@ -6,20 +6,18 @@ use Closure;
 use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
-class BennerSection extends Component
+class ProfileSection extends Component
 {
     /**
      * Create a new component instance.
      */
-    public $counts;
     public $profileData;
 
     public function __construct(
-        $counts, 
-        public string $profile
+        $profileData
     )
     {
-        $this->counts = $counts;
+        $this->profileData = $profileData;
     }
 
     /**
@@ -27,6 +25,6 @@ class BennerSection extends Component
      */
     public function render(): View|Closure|string
     {
-        return view('components.profile.benner-section');
+        return view('components.profile.profile-section');
     }
 }
