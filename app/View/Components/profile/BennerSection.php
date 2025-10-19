@@ -11,11 +11,11 @@ class BEnnerSection extends Component
     /**
      * Create a new component instance.
      */
-    //public $blogs;
+    public $counts;
 
-    public function __construct()
+    public function __construct($counts)
     {
-        // $this->blogs = $blogs;
+        $this->counts = $counts;
     }
 
     /**
