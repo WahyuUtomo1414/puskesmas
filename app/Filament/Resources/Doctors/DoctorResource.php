@@ -25,9 +25,9 @@ class DoctorResource extends Resource
 
     protected static string | UnitEnum | null $navigationGroup = 'Data Layanan';
 
-    protected static ?string $navigationLabel = 'Doctor';
+    protected static ?string $navigationLabel = 'Dokter';
 
-    protected static ?string $pluralModelLabel = 'Doctor';
+    protected static ?string $pluralModelLabel = 'Dokter';
 
     public static function form(Schema $schema): Schema
     {

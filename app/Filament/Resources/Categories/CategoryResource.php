@@ -25,9 +25,9 @@ class CategoryResource extends Resource
 
     protected static string | UnitEnum | null $navigationGroup = 'Data Blog';
 
-    protected static ?string $navigationLabel = 'Category';
+    protected static ?string $navigationLabel = 'Categori';
 
-    protected static ?string $pluralModelLabel = 'Category';
+    protected static ?string $pluralModelLabel = 'Categori';
 
     public static function form(Schema $schema): Schema
     {

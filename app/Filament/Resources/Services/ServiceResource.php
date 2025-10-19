@@ -25,9 +25,9 @@ class ServiceResource extends Resource
 
     protected static string | UnitEnum | null $navigationGroup = 'Data Layanan';
 
-    protected static ?string $navigationLabel = 'Service';
+    protected static ?string $navigationLabel = 'Layanan';
 
-    protected static ?string $pluralModelLabel = 'Service';
+    protected static ?string $pluralModelLabel = 'Layanan';
 
     public static function form(Schema $schema): Schema
     {
