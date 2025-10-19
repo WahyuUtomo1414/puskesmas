@@ -23,7 +23,7 @@
                                 <p class="!mb-2">
                                     {{ \Illuminate\Support\Str::words(strip_tags($l->description), 15, '...') }}
                                 </p>
-                                <a href="#" class="more hover !text-[#fab758] focus:!text-[#fab758] hover:!text-[#fab758]">Selengkapnya</a>
+                                <a href="{{ route('service.show', ['id' => $l->id]) }}"" class="more hover !text-[#fab758] focus:!text-[#fab758] hover:!text-[#fab758]">Selengkapnya</a>
                             </div>
                             <!--/.card-body -->
                         </div>

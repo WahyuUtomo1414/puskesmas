@@ -1,7 +1,7 @@
 <x-layout.base title="{{ $blog->title }}">
     <div class="bg-white grow shrink-0">
 
-        <x-layout.navbar1 />
+        <x-layout.navbar />
     
         <section class="wrapper bg-gray-100">
             <div class="container pt-10 pb-36 xl:pt-[4.5rem] lg:pt-[4.5rem] md:pt-[4.5rem] xl:pb-40 lg:pb-40 md:pb-40 !text-center">
