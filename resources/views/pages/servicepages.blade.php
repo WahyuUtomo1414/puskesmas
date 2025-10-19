@@ -3,6 +3,8 @@
         <x-layout.navbar />
 
         <x-layanan.hero-section :hero="$hero" />
+
+        <x-layanan.tentang-layanan-section />
         
         <x-layout.footer />
     </div>
