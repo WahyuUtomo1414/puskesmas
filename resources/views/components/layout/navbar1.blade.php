@@ -4,7 +4,7 @@
             
             <div class="navbar-brand w-full flex items-center space-x-3">
                 <a href="/" class="block">
-                    <img src="{{ asset('images/logo1.jpg') }}" alt="HIMSI Logo" class="h-16 w-auto max-h-16" style="max-width:150px;">
+                    <img src="{{ asset('images/logo2.png') }}" alt="HIMSI Logo" class="h-16 w-auto max-h-16" style="max-width:150px;">
                 </a>
             </div>
 
@@ -16,7 +16,15 @@
                 <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
                     <ul class="navbar-nav">
                         <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="/profile">Profile</a></li>
+                        
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#divisi" data-bs-toggle="dropdown">Profile</a>
+                            <ul class="dropdown-menu">
+                                
+                                <li class="nav-item"><a class="dropdown-item" href="/profile">Profile</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">Struktur Organisasi</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">Survei</a></li>          
+                            </ul>
+                        </li>
                         
                         <li class="nav-item"><a class="nav-link" href="/service">Layanan</a>
                         </li>
