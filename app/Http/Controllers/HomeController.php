@@ -19,7 +19,7 @@ class HomeController extends Controller
         $homeData = Cache::remember('home_data', 600, function () {
             return [
                 'counts' => Count::where('active', true)->limit(4)->get(),
-                'divisi' => Service::where('active', true)->limit(4)->get(),
+                'layanan' => Service::where('active', true)->limit(4)->get(),
                 // 'faqs'   => Faq::where('active', true)->limit(6)->get(),
                 // 'branches' => Branch::where('active', true)->with('blogs')->get(),
                 'blogs'    => Blog::where('active', true)->get(),
