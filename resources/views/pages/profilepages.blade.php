@@ -5,6 +5,8 @@
         <x-profile.benner-section :counts="$counts" :profile="$profile" />
 
         <x-profile.profile-section :profileData="$profileData" />
+
+        <x-profile.struktural-section />
         
         <x-layout.footer />
     </div>
