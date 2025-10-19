@@ -1,7 +1,7 @@
 <x-layout.base title="Home">
     <div class="bg-white grow shrink-0">
         <!-- Header -->
-        <x-layout.navbar1 />
+        <x-layout.navbar />
 
         <x-home.hero-section :hero="$hero" />
 

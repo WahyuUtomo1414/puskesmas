@@ -28,6 +28,10 @@ class HomeController extends Controller
             ];
         });
 
+        $data['strukturOrganisasi'] = SettingHelper::getSetting('strukturOrganisasi');
+        $data['ilp'] = SettingHelper::getSetting('ilp');
+        $data['kb'] = SettingHelper::getSetting('kb');
+
         $data['hero'] = BennerHelper::getBennerImageUrl('hero');
 
         // Get Setting Helpers About Section
@@ -44,7 +48,7 @@ class HomeController extends Controller
         // //Get Setting Helpers Faq Section
         // $data['faqTitle'] = SettingHelper::getSetting('faq_title');
 
-        // //Get Setting Helpers Footer Section
+        //Get Setting Helpers Footer Section
         $data['instagram'] = SettingHelper::getSetting('instagram');
         $data['tiktok'] = SettingHelper::getSetting('tiktok');
         $data['facobook'] = SettingHelper::getSetting('Facobook');

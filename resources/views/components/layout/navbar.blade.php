@@ -1,31 +1,57 @@
-<nav id="navbar" class="bg-tranparant p-2 fixed top-0 left-0 right-0 z-50">
-    <div class="flex flex-col lg:flex-row lg:items-center lg:justify-between px-4 lg:px-10">
+<nav class="navbar navbar-expand-lg fancy navbar-light bg-white caret-none xl:[background:0_0!important] lg:[background:0_0!important]">
+    <div class="container">
+        <div class="navbar-collapse-wrapper bg-[rgba(255,255,255)] opacity-100 flex flex-row !flex-nowrap w-full justify-between items-center shadow-2xl border-gray-900">
+            
+            <div class="navbar-brand w-full flex items-center space-x-3">
+                <a href="/" class="block">
+                    <img src="{{ asset('images/logo2.png') }}" alt="HIMSI Logo" class="h-16 w-auto max-h-16" style="max-width:150px;">
+                </a>
+            </div>
 
-        <!-- Logo & Hamburger -->
-        <div class="flex items-center justify-between w-full lg:w-auto">
-            <!-- Logo -->
-            <a href="/" class="flex items-center">
-                <img src="" 
-                    alt="Logo" class="h-7 lg:h-10 w-auto">
-            </a>
 
-            <!-- Hamburger Button (mobile only) -->
-            <button id="menu-toggle" class="block lg:hidden focus:outline-none">
-                <svg class="w-6 h-6 text-gray-800" fill="none" stroke="currentColor"
-                    viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                        d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+            <div class="navbar-collapse offcanvas offcanvas-nav offcanvas-start">
+                <div class="offcanvas-header xl:!hidden lg:!hidden">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body xl:!ml-auto lg:!ml-auto flex  flex-col !h-full">
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+                        
+                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#divisi" data-bs-toggle="dropdown">Tentang Kami</a>
+                            <ul class="dropdown-menu">
+                                
+                                <li class="nav-item"><a class="dropdown-item" href="/profile">Profile</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="{{ $strukturOrganisasi }}" target="_blank">Struktur Organisasi</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="{{ $ilp }}" target="_blank">Alur Palayanan ILP</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="{{ $kb }}" target="_blank">Alur Palayanan KB</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#divisi">Survei</a></li>          
+                            </ul>
+                        </li>
+                        
+                        <li class="nav-item"><a class="nav-link" href="/service">Layanan</a>
+                        </li>
+                        
+                        <div class="offcanvas-footer xl:!hidden lg:!hidden">
+                        </div>
+                        <!-- /.offcanvas-footer -->
+                    </ul>
+                </div>
+                <!-- /.offcanvas-body -->
+            </div>
+
+            <!-- /.navbar-collapse -->
+            <div class="navbar-other w-full !flex !ml-auto">
+                <ul class="navbar-nav !flex-row !items-center !ml-auto">
+                    <li class="nav-item xl:!hidden lg:!hidden">
+                        <button class="hamburger offcanvas-nav-btn"><span></span></button>
+                    </li>
+                </ul>
+                <!-- /.navbar-nav -->
+            </div>
+            <!-- /.navbar-other -->
+
         </div>
-
-        <!-- Navigation Links -->
-        <ul id="menu"
-            class="hidden flex-col space-y-2 mt-4 text-gray-900 font-medium lg:flex lg:flex-row lg:space-x-8 lg:space-y-0 lg:mt-0 lg:items-center text-sm lg:text-lg">
-            <li><a href="/" class="hover:text-amber-600 block py-2">Home</a></li>
-            <li><a href="#project" class="hover:text-amber-600 block py-2">Project</a></li>
-            <li><a href="#" class="hover:text-amber-600 block py-2">Blog</a></li>
-            <li><a href="#contact" class="hover:text-amber-600 block py-2">Contact</a></li>
-        </ul>
+        <!-- /.navbar-collapse-wrapper -->
     </div>
+    <!-- /.container -->
 </nav>
