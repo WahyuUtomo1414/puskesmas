@@ -52,7 +52,7 @@ class HomeController extends Controller
         $data['instagram'] = SettingHelper::getSetting('instagram');
         $data['tiktok'] = SettingHelper::getSetting('tiktok');
         $data['facobook'] = SettingHelper::getSetting('Facobook');
-        //$data['whatsapp'] = SettingHelper::getSetting('whatsapp');
+        $data['whatsapp'] = SettingHelper::getSetting('whatsapp');$data['whatsapp'] = SettingHelper::getSetting('whatsapp');
 
         return view('pages.homepage', $data = array_merge($data, $homeData));
     }

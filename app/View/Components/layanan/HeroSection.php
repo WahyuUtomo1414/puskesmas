@@ -11,13 +11,13 @@ class HeroSection extends Component
     /**
      * Create a new component instance.
      */
-    //public $profileData;
+    public $hero;
 
     public function __construct(
-        //$profileData
+        $hero
     )
     {
-        //$this->profileData = $profileData;
+        $this->hero = $hero;
     }
 
     /**

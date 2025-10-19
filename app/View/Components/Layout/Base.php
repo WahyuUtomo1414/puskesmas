@@ -15,7 +15,7 @@ class Base extends Component
     /**
      * Create a new component instance.
      */
-    public function __construct($title = 'JASANTATECH', $whatsapp = null)
+    public function __construct($title = 'PUSKESMAS', $whatsapp = null)
     {
         $this->title = $title;
         $this->whatsapp = $whatsapp ?? SettingHelper::getSetting('whatsapp');
