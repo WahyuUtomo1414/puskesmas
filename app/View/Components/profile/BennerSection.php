@@ -12,13 +12,16 @@ class BEnnerSection extends Component
      * Create a new component instance.
      */
     public $counts;
+    public $profileData;
 
     public function __construct(
         $counts, 
+        $profileData,
         public string $profile
     )
     {
         $this->counts = $counts;
+        $this->profileData = $profileData;
     }
 
     /**

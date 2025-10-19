@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Count;
 use Illuminate\Http\Request;
 use App\Helpers\BennerHelper;
+use App\Models\Profile;
 use Illuminate\Support\Facades\Cache;
 
 class ProfileController extends Controller
@@ -14,6 +15,7 @@ class ProfileController extends Controller
         $profileData = Cache::remember('profile_data', 600, function () {
             return [
                 'counts' => Count::where('active', true)->limit(4)->get(),
+                'profileData' => Profile::where('active', true)->limit(1)->get(),
             ];
         });
 
