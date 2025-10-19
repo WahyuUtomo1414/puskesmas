@@ -1,4 +1,4 @@
-<section class="py-10 bg-white">
+<section class="py-16 bg-white">
     <div class="container mx-auto px-6 lg:px-12 space-y-16">
 
         <!-- Sejarah -->
