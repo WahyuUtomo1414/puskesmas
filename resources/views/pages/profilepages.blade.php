@@ -2,7 +2,7 @@
     <div class="bg-white grow shrink-0">
         <x-layout.navbar />
 
-        <x-profile.benner-section :counts="$counts"  />
+        <x-profile.benner-section :counts="$counts" :profile="$profile" />
         
         <x-layout.footer />
     </div>

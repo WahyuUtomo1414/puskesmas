@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Count;
 use Illuminate\Http\Request;
+use App\Helpers\BennerHelper;
 use Illuminate\Support\Facades\Cache;
 
 class ProfileController extends Controller
@@ -17,6 +18,8 @@ class ProfileController extends Controller
         });
 
         $data = [];
+
+        $data['profile'] = BennerHelper::getBennerImageUrl('profile');
 
         return view('pages.profilepages', $data = array_merge($data, $profileData));
     }
