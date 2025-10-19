@@ -24,6 +24,7 @@ class ServiceForm
                     ->label('Deskripsi'),
                 FileUpload::make('banner')
                     ->required()
+                    ->disk('public')
                     ->directory('service')
                     ->image()
                     ->columnSpanFull(),
@@ -31,6 +32,7 @@ class ServiceForm
                     ->required()
                     ->directory('service')
                     ->image()
+                    ->disk('public')
                     ->columnSpanFull(),    
                 Repeater::make('schedule')
                     ->label('Schedule')
@@ -54,6 +56,7 @@ class ServiceForm
                     ->image()
                     ->directory('service')
                     ->image()
+                    ->disk('public')
                     ->multiple()
                     ->required()
                     ->columnSpanFull(),      
