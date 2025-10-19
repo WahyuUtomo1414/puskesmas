@@ -8,7 +8,7 @@
         <!-- /column -->
         <div class="xl:w-6/12 lg:w-6/12 w-full flex-[0_0_auto] !px-[15px] xl:!px-[35px] lg:!px-[35px] md:!px-[20px] !mt-[15px] xl:!mt-0 lg:!mt-0 max-w-full">
         <p class="lead !text-[1.25rem] !leading-[1.6] font-medium !my-3">Kami percaya bahwa kesehatan adalah investasi terbaik.</p>
-        <a href="#" class="more hover !text-[#a07cc5]">Tentang Kami</a>
+        <a href="/profile" class="more hover !text-[#a07cc5]">Tentang Kami</a>
         </div>
         <!-- /column -->
     </div>
