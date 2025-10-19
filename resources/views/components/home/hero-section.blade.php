@@ -14,7 +14,6 @@
     </div>
     <!-- /.row -->
     <div class="!relative">
-        <div class="shape bg-dot violet rellax !w-[7rem] !h-[12.5rem] !absolute z-[1] opacity-50" data-rellax-speed="1" style="top: -2.5rem; right: -2.7rem;"></div>
         <figure class="rounded-[.4rem] xl:!mb-[-10rem] lg:!mb-[-10rem] md:!mb-[-10rem]">
             <img class="rounded-[.4rem]" src="{{ $hero }}" srcset="" alt="image">
         </figure>
