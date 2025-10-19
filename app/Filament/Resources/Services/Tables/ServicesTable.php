@@ -40,9 +40,6 @@ class ServicesTable
                     ->toggleable()
                     ->label('Deskripsi'),
 
-                TextColumn::make('schedule')
-                    ->label('Schedule'),
-
                 IconColumn::make('active')
                     ->boolean()
                     ->label('Aktif'),

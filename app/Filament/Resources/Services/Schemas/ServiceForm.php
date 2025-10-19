@@ -18,7 +18,7 @@ class ServiceForm
             ->components([
                 TextInput::make('name')
                     ->columnSpanFull()
-                    ->label('Name'),
+                    ->label('Nama'),
                 RichEditor::make('description')
                     ->columnSpanFull()
                     ->label('Deskripsi'),
@@ -36,12 +36,12 @@ class ServiceForm
                     ->label('Schedule')
                     ->schema([
                         TextInput::make('day')
-                            ->label('Day')
+                            ->label('Hari')
                             ->placeholder('e.g. Monday')
                             ->required(),
 
                         TextInput::make('time')
-                            ->label('Time')
+                            ->label('Waktu')
                             ->placeholder('e.g. 08:00 - 17:00')
                             ->required(),
                     ])
