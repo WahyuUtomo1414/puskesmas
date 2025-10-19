@@ -20,7 +20,7 @@
                                     <div class="card min-h-[620px] max-h-[620px]">
                                         
                                         <figure class="card-img-top overlay overlay-1 hover-scale group"><a href="#"> 
-                                            <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105 max-h-[240px]" src="{{ asset('storage/blog/' . $b->banner) }}" alt="image"></a>
+                                            <img class="!transition-all !duration-[0.35s] !ease-in-out group-hover:scale-105 max-h-[240px]" src="{{ asset('storage/' . $b->banner) }}" alt="image"></a>
                                             <figcaption class="group-hover:opacity-100 absolute w-full h-full opacity-0 text-center px-4 py-3 inset-0 z-[5] pointer-events-none p-2">
                                                 <h5 class="from-top  !mb-0 absolute w-full translate-y-[-80%] p-[.75rem_1rem] left-0 top-2/4">Selengkapnya</h5>
                                             </figcaption>
@@ -29,14 +29,14 @@
                                         <div class="card-body flex-[1_1_auto] p-[40px] xl:!p-[1.75rem_1.75rem_1rem_1.75rem] lg:!p-[1.75rem_1.75rem_1rem_1.75rem] md:!p-[1.75rem_1.75rem_1rem_1.75rem] max-md:pb-4  ">
                                             <div class="post-header">
                                                 <div class="inline-flex !mb-[.4rem] uppercase !tracking-[0.02rem] text-[0.7rem] font-bold !text-[#aab0bc] relative align-top !pl-[1.4rem] before:content-[''] before:absolute before:inline-block before:translate-y-[-60%] before:w-3 before:h-[0.05rem] before:left-0 before:top-2/4 before:bg-[#3f78e0]">
-                                                    <a href="#" class="hover"></a>
+                                                    <a href="#" class="hover" rel="category">{{ $b->category->name }}</a>
                                                 </div>
                                             <!-- /.post-category -->
                                             <h2 class="post-title h3 !mt-1 !mb-3"><a class="!text-[#343f52] hover:!text-[#3f78e0]" href="#"> {{ \Illuminate\Support\Str::limit($b->title, 50, '...') }}</a></h2>
                                             </div>
                                             <!-- /.post-header -->
                                             <div class="!relative">
-                                                <p> {{ \Illuminate\Support\Str::limit(strip_tags($b->content), 100, '...') }} </p>
+                                                <p> {{ \Illuminate\Support\Str::limit(strip_tags($b->content), 160, '...') }} </p>
                                             </div>
                                             <!-- /.post-content -->
                                         </div>

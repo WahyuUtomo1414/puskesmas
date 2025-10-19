@@ -28,6 +28,7 @@ class BlogForm
                 FileUpload::make('banner')
                     ->required()
                     ->directory('blog')
+                    ->disk('public')
                     ->image()
                     ->columnSpanFull(),
                 RichEditor::make('content')
@@ -35,6 +36,7 @@ class BlogForm
                     ->columnSpanFull(),
                 FileUpload::make('image')
                     ->image()
+                    ->disk('public')
                     ->directory('blog')
                     ->image()
                     ->multiple()
