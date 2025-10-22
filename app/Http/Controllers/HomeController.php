@@ -25,6 +25,11 @@ class HomeController extends Controller
                 'blogs'    => Blog::where('active', true)->get(),
                 // 'branchesAsc' => Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'asc')])->get(),
                 // 'branchesDesc'=> Branch::with(['blogs' => fn($q) => $q->orderBy('created_at', 'desc')])->get(),
+                // 🔹 Ambil semua blog kategori "kegiatan"
+                'imageGalleries' => Blog::whereHas('category', fn($q) => $q->where('name', 'kegiatan'))
+                    ->where('active', true)
+                    ->limit(10)
+                    ->get(['title', 'image']),
             ];
         });
 
@@ -52,7 +57,8 @@ class HomeController extends Controller
         $data['instagram'] = SettingHelper::getSetting('instagram');
         $data['tiktok'] = SettingHelper::getSetting('tiktok');
         $data['facobook'] = SettingHelper::getSetting('Facobook');
-        $data['whatsapp'] = SettingHelper::getSetting('whatsapp');$data['whatsapp'] = SettingHelper::getSetting('whatsapp');
+        $data['whatsapp'] = SettingHelper::getSetting('whatsapp');
+        $data['whatsapp'] = SettingHelper::getSetting('whatsapp');
 
         return view('pages.homepage', $data = array_merge($data, $homeData));
     }

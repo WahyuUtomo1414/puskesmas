@@ -9,6 +9,8 @@
 
         <x-home.layanan-section :layanan="$layanan" />
 
+        <x-home.image-galery-section :imageGalleries="$imageGalleries" />
+
         {{-- <x-home.about-section :aboutTextA="$aboutTextA" :aboutTextB="$aboutTextB" :vision="$vision" :mission="$mission" :aboutImage="$aboutImage" /> 
 
         <x-home.count-section :counts="$counts" />
