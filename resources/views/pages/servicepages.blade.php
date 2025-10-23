@@ -5,6 +5,8 @@
         <x-layanan.hero-section :hero="$hero" />
 
         <x-layanan.tentang-layanan-section />
+
+        <x-home.layanan-section :layanan="$layanan" />
         
         <x-layout.footer />
     </div>
