@@ -9,6 +9,9 @@
 
         <x-home.layanan-section :layanan="$layanan" />
 
+        <!-- Doctor Section (BARU) ✨ -->
+        <x-home.doctor-section />
+
         <x-home.image-galery-section :imageGalleries="$imageGalleries" />
 
         {{-- <x-home.about-section :aboutTextA="$aboutTextA" :aboutTextB="$aboutTextB" :vision="$vision" :mission="$mission" :aboutImage="$aboutImage" /> 
