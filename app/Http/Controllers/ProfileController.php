@@ -15,7 +15,7 @@ class ProfileController extends Controller
         $profileData = Cache::remember('profile_data', 600, function () {
             return [
                 'counts' => Count::where('active', true)->limit(4)->get(),
-                'profileData' => Profile::where('active', true)->where('active', true)->first(),
+                'profileData' => Profile::where('active', true)->first(),
             ];
         });
 
@@ -23,6 +23,9 @@ class ProfileController extends Controller
 
         $data['profile'] = BennerHelper::getBennerImageUrl('profile');
 
-        return view('pages.profilepages', $data = array_merge($data, $profileData));
+        $data['whatsapp'] = $profileData['profileData']->whatsapp_number 
+                            ?? '6285881642770';
+
+        return view('pages.profilepages', array_merge($data, $profileData));
     }
 }

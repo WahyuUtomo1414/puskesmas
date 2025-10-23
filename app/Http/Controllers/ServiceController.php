@@ -17,6 +17,8 @@ class ServiceController extends Controller
 
         $data['whatsapp'] = SettingHelper::getSetting('whatsapp');
 
+        $data['layanan'] = Service::where('active', true)->get();
+
         return view('pages.servicepages', $data);
     }
 

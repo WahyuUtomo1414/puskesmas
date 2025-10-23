@@ -17,7 +17,7 @@
         </div>
 
         <div class="flex justify-center">
-            <img src="{{ asset('images/layanan-puskesmas.jpg') }}" 
+            <img src="{{ asset('assets/img/layanan-puskesmas.jpeg') }}" 
                 alt="Pelayanan di Puskesmas"
                 class="rounded-xl shadow-lg max-w-md w-full">
         </div>
